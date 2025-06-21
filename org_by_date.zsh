@@ -1,7 +1,7 @@
 #!/bin/zsh
 
-for f in *; do 
-    date -r  $f +%Y/%m
+for file in *; do 
+    path_date=$(date -r  $file +./%Y/%m)
+    mkdir -p $path_date && mv $file $path_date
 done
 
-# mkdir -p test && mv test.txt test/
